@@ -1,0 +1,131 @@
+@import '.././index.css';
+
+
+
+
+
+header{
+    background-color: var(--color-primary);
+    border-bottom: 1px solid var(--border-color);
+    /* height: 5rem; */
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin-left: 7px;
+    margin-right: 7px;
+    
+
+}
+
+.header__title_white{
+    color: rgb(38, 252, 252);
+}
+
+.header__home-link:link{
+    color: rgb(105, 207, 247);
+}
+
+.header__home-link i{
+    font-size: 3rem;
+}
+
+.header__search{
+    display:none;
+}
+
+
+
+@media only screen and (min-width: 700px ) {
+
+    .header{
+        width: var(--page-width-lg);
+        margin: 0 auto;
+    }
+
+    .header__search-container{
+        display: flex;
+        border: 1px solid var(--border-color);
+        border-radius: 7px;
+        overflow: hidden;
+    }
+    
+    
+    
+    .header__search-container i{
+        margin: 5px 5px 0 5px;
+    }
+    
+    .header__search{
+        display: initial;
+        border-style: none;
+        height: 1.5rem;
+        background-color: inherit;
+    
+    }
+    
+    .header__search:focus{
+        outline: none;
+    }
+    .header__home-link, .header__search{
+        width: 150px;
+    }
+}
+.article-grid-container{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display:grid;
+    justify-items: center;
+    gap: 20px 10px;
+ 
+}
+
+.card{
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 5px rgb(12, 12, 12);
+    width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    align-content: center;
+
+}
+
+
+.card__image{
+    width: 100%;
+    height: auto;
+}
+
+.card__content{
+    padding: 10px;
+}
+
+.card__text, .card__button{
+
+
+    margin: 0.5rem 0;
+}
+
+.card__button{
+    width: 75px;
+    height: 1.5rem;
+    background-color: var(--button-color-primary);
+    border: none;
+    border-radius: 5px;
+    color: rgb(20, 19, 19);
+}
+
+@media only screen and (min-width: 710px ) {
+
+
+    .article-grid-container{
+        grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+        width: var(--page-width-lg);
+        margin-right: auto;
+        margin-left: auto;
+        
+    }
+
+}
